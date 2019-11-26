@@ -1,1 +1,1 @@
-Microservices API.
+Game microservices API.
