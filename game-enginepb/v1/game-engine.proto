@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package gameengine;
+
+option go_package = "gameengine";
+
+message GetSizeRequest {
+}
+
+message GetSizeResponse {
+    double size = 1;
+}
+
+message SetScoreRequest {
+    double score = 1;
+}
+
+message SetScoreResponse {
+    bool result = 1;
+}
+
+service GameEngine {
+    rpc GetSize(GetSizeRequest) returns (GetSizeResponse);
+    rpc SetScore(SetScoreRequest) returns (SetScoreResponse);
+}
+
